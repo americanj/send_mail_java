@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectionFactory {
-    private static String url = "jdbc:mariadb://localhost/list_email_db?useTimezone=true&serverTimezone=UTC";
+    private static String url = "jdbc:mariadb://localhost/email_db?useTimezone=true&serverTimezone=UTC";
     private static String user = "igor";
     private static String password = "0122";
 
@@ -34,9 +34,4 @@ public class ConnectionFactory {
     public static Connection recoveryConnection(){
         return connection;
     }
-
-
-
-
-
 }

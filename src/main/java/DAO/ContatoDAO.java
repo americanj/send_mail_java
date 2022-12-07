@@ -26,8 +26,9 @@ public class ContatoDAO {
             try(ResultSet resultSet = preparedStatement.getResultSet()){
                 while(resultSet.next()){
                     Contato contato = new Contato(
-                            resultSet.getString(1),
-                            resultSet.getString(2)
+                            resultSet.getInt(1),
+                            resultSet.getString(2),
+                            resultSet.getString(3)
                     );
                     //resultSet.getString(contato.getEmail());
                     //resultSet.getString(contato.getNome());

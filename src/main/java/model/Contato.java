@@ -1,27 +1,29 @@
 package model;
 
 public class Contato {
-    private String email;
+    private Integer id;
     private String nome;
+    private String email;
 
 
-    public Contato(String email, String nome){
-        this.email = email;
+    public Contato(Integer id, String nome, String email) {
+        this.id = id;
         this.nome = nome;
+        this.email = email;
+
     }
 
-    public Contato(String email){
+
+    public Contato(String email) {
         this.email = email;
     }
 
-
-
-    public String getEmail() {
-        return email;
+    public Integer getId() {
+        return id;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -32,8 +34,11 @@ public class Contato {
         this.nome = nome;
     }
 
-   /* @Override
-    public String toString() {
-        return email + " - " + nome;
-    }*/
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
