@@ -30,23 +30,27 @@ public class App {
 
         List<Contato> listaTodosContatos = contatoDAO.listar();
 
-        String formatadorEmail = "";
+        /*Envia email para para todo mundo de uma vez só, atravês de uma string acumuladora*/
+        /*String formatadorEmail = "";
         for (Contato listaTodosContato : listaTodosContatos) {
             formatadorEmail += listaTodosContato.getEmail().concat(",");
-        }
+        }*/
 
-        emailController.setDestinatarios(formatadorEmail);
-        emailController.setCabecalho("Fala Dev!");
-        emailController.setAssunto(stringBuilder.toString());
+        /*Envia email 1 por 1*/
+        listaTodosContatos.forEach(contato -> {
+            emailController.setDestinatarios(contato.getEmail());
+            emailController.setCabecalho("Fala! " + contato.getNome());
+            emailController.setAssunto(stringBuilder.toString());
 
-        try{
-            emailController.enviar(true);
-            //verificadora = false;
-        } catch (MessagingException e) {
-            throw new RuntimeException(e);
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        }
+            try{
+                emailController.enviar(true);
+                    //verificadora = false;
+            } catch (MessagingException e) {
+                throw new RuntimeException(e);
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
     public static void criarTemplateEmail(StringBuilder stringBuilder){
         /*stringBuilder.append("<div style='border:solid 2px cyan; background:whitesmoke; width:700px; height:400px; margin:5% auto'>");
@@ -73,9 +77,6 @@ public class App {
                 //stringBuilder.append("<img style='position: absolute; bottom: 50px; width: 300px;' src='https://www.campaignmonitor.com/wp-content/uploads/2019/09/CountdownGIF.gif'>");
             stringBuilder.append("</div>");
         stringBuilder.append("</div>");
-
-
-
     }
 }
 
