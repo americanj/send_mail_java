@@ -7,8 +7,6 @@
 <br>
 
 # **Tópicos**
-
-
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Funcionalidades](#funcionalidades)
 * [Aplicação](#aplicação)
@@ -16,11 +14,8 @@
 * [Acesso ao Projeto](#acesso-ao-projeto)
 * [Abrir e rodar o projeto](#abrir-e-rodar-o-projeto)
 
-<br>
-
 ## **Descrição do projeto**
 <p>O projeto visa enviar email personalizado para uma lista de contatos, definidos em um banco de dados pelo administrador.</p>
-<br>
 
 ## **Funcionalidades**
 
@@ -28,14 +23,9 @@
 2. Permite custimizar o email que enviará.
 3. Permite ser incluso a outros projetos como uma extensão.
 
-<br>
-
 ## **Aplicação**
-<br>
 
 ![](https://i.imgur.com/XnEv2S1.gif)
-
-<br>
 
 ## **Técnicas e tecnologias utilizadas**
 - Java
@@ -45,17 +35,13 @@
 - MySQL Workbench
 - javax.mail
 
-<br>
-
 ## **Acesso ao projeto**
 Você pode <a href="https://github.com/oliveiradeigor/send_mail_java">acessar o código fonte do projeto</a> ou <a href="https://github.com/oliveiradeigor/send_mail_java/archive/refs/heads/main.zip">baixá-lo</a>
 
-<br>
 
 ## **Abrir e rodar o projeto**
 
-
-1. Primeiramente precisamos gerar uma senha para você utilizar com o java assita esse vídeo: [gerar senha](https://www.youtube.com/watch?v=rGN_favALws) e obtenha sua senha.
+1. Primeiramente precisamos gerar uma senha para você utilizar com o java assista esse vídeo: [gerar senha](https://www.youtube.com/watch?v=rGN_favALws) e obtenha sua senha.
 2. Vá na classe principal `App.java` e faça o mostrado abaixo:
 ![](https://i.imgur.com/nnuUXQU.gif)
 No meu exemplo de código ele só não está em string, porque meu email e senha estão em uma classe privada, não rastreada pelo git.
